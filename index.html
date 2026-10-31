@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirrorwalker — AI Text Adventure</title>
+  <meta name="description" content="Mirrorwalker: an AI-driven narrative adventure game designed at Shanghai Innovation Institute AI Summer Camp 2025. Three worlds, one mirror — conformity, self-identity, and breaking boundaries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="mirror-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="brand">MIRROR<span>WALKER</span></div>
+    <nav>
+      <a href="#concept">Concept</a>
+      <a href="#worlds">Three Worlds</a>
+      <a href="#mbti">MBTI Engine</a>
+      <a href="#teaser">Playable Teaser</a>
+      <a href="#credits">Credits</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <p class="kicker">Shanghai Innovation Institute · AI Summer Camp · Jul–Aug 2025</p>
+        <h1 class="hero-title">MIRROR<span>WALKER</span></h1>
+        <p class="hero-sub">An AI-driven narrative adventure.<br/>Three borrowed worlds. One question staring back at you:<br/><em>who is walking — you, or your reflection?</em></p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#teaser">Play the Teaser</a>
+          <a class="btn ghost" href="#worlds">Enter the Three Worlds</a>
+        </div>
+      </div>
+      <div class="hero-mirror" aria-hidden="true"><div class="mirror-glass"></div></div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section class="section" id="concept">
+      <h2 class="section-title">The Concept</h2>
+      <div class="concept-grid">
+        <div class="concept-text">
+          <p><strong>Mirrorwalker</strong> is a choice-driven text adventure where an AI narrator doesn't just tell the story — it reads you. Every decision you make is quietly scored against MBTI personality dimensions, and the world reshapes its dialogue, tone, and endings around the person it thinks you are.</p>
+          <p>The game is built as <strong>three interconnected levels</strong>, each borrowing the DNA of a famous story to interrogate one facet of the self: <em>conformity</em>, <em>self-identity</em>, and <em>the courage to break established boundaries</em>.</p>
+          <p>I conceived the idea and designed the gameplay structure, themes, and story content; the choice-based MBTI system linking decisions to personality dimensions is also my design. My teammates handled most of the Dify-based technical implementation.</p>
+        </div>
+        <div class="concept-facts">
+          <div class="fact"><span class="fact-num">3</span><span class="fact-label">Interconnected Worlds</span></div>
+          <div class="fact"><span class="fact-num">4</span><span class="fact-label">MBTI Dimensions Tracked</span></div>
+          <div class="fact"><span class="fact-num">AI</span><span class="fact-label">Adaptive Narrator (Dify)</span></div>
+          <div class="fact"><span class="fact-num">∞</span><span class="fact-label">Endings Shaped by You</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE WORLDS -->
+    <section class="section" id="worlds">
+      <h2 class="section-title">Three Worlds, Three Questions</h2>
+      <p class="section-lead">Each level traps the player inside a story they think they know — then turns the mirror.</p>
+      <div class="worlds">
+        <article class="world-card" data-accent="violet">
+          <div class="world-num">I</div>
+          <h3>The Devotion of Suspect X</h3>
+          <p class="world-theme">THEME · CONFORMITY</p>
+          <p class="world-desc">A perfect crime, a perfect alibi, a society that rewards those who disappear into their roles. Do you protect the person you love by becoming exactly what the world expects — even when the cost is yourself?</p>
+          <p class="world-q">“How much of yourself would you erase to keep someone else whole?”</p>
+        </article>
+        <article class="world-card" data-accent="cyan">
+          <div class="world-num">II</div>
+          <h3>Cyberpunk 2077</h3>
+          <p class="world-theme">THEME · SELF-IDENTITY</p>
+          <p class="world-desc">Night City, where memory is editable and chrome replaces flesh. When your thoughts can be copied and your body swapped, what is left that is unambiguously <em>you</em>?</p>
+          <p class="world-q">“If your memories were rewritten tonight, would you still be you tomorrow?”</p>
+        </article>
+        <article class="world-card" data-accent="amber">
+          <div class="world-num">III</div>
+          <h3>The Truman Show</h3>
+          <p class="world-theme">THEME · BREAKING BOUNDARIES</p>
+          <p class="world-desc">A comfortable world built to keep you inside it. Every exit is labelled dangerous, every rule is "for your own good". The final level asks the only question that matters.</p>
+          <p class="world-q">“The door was never locked. Will you walk through it?”</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MBTI ENGINE -->
+    <section class="section" id="mbti">
+      <h2 class="section-title">The MBTI Choice Engine</h2>
+      <p class="section-lead">No quizzes, no self-report. Your personality is inferred from what you actually do under pressure.</p>
+      <div class="mbti-grid">
+        <div class="mbti-axis"><span class="pole">E</span><div class="axis-bar"><div class="axis-fill" style="--p:62%"></div></div><span class="pole">I</span><p>Energy — do you confront the crowd or vanish into it?</p></div>
+        <div class="mbti-axis"><span class="pole">S</span><div class="axis-bar"><div class="axis-fill" style="--p:48%"></div></div><span class="pole">N</span><p>Perception — do you trust the evidence or the pattern behind it?</p></div>
+        <div class="mbti-axis"><span class="pole">T</span><div class="axis-bar"><div class="axis-fill" style="--p:55%"></div></div><span class="pole">F</span><p>Judgment — do you save the many, or the one in front of you?</p></div>
+        <div class="mbti-axis"><span class="pole">J</span><div class="axis-bar"><div class="axis-fill" style="--p:40%"></div></div><span class="pole">P</span><p>Structure — do you follow the plan or improvise when it breaks?</p></div>
+      </div>
+      <p class="mbti-note">Every choice quietly shifts one or more axes. The AI narrator reads the running profile and adapts dialogue, NPC attitudes, and which ending you are offered — two players rarely see the same story.</p>
+    </section>
+
+    <!-- TEASER -->
+    <section class="section teaser" id="teaser">
+      <h2 class="section-title">A Taste of the Mirror</h2>
+      <p class="section-lead">A 5-choice playable teaser, built on the same scoring logic as the full game.</p>
+      <div class="terminal" id="terminal">
+        <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">mirrorwalker://teaser</span></div>
+        <div class="terminal-body" id="terminal-body">
+          <p class="t-line sys">MIRRORWALKER v0.9 — adaptive narrative engine</p>
+          <p class="t-line sys">Profiling module: ONLINE · Dimensions tracked: E/I · S/N · T/F · J/P</p>
+          <p class="t-line">&nbsp;</p>
+          <div id="story"></div>
+          <div id="choices"></div>
+        </div>
+      </div>
+      <p class="teaser-hint">Your choices are scored live. At the end, the mirror tells you what it saw.</p>
+    </section>
+
+    <!-- CREDITS -->
+    <section class="section" id="credits">
+      <h2 class="section-title">Credits &amp; Context</h2>
+      <div class="credits-card">
+        <p><strong>Role:</strong> Game Concept Designer — idea conception, gameplay structure, themes, story content, and the choice-based MBTI system design.</p>
+        <p><strong>Team:</strong> Dify-based technical implementation by teammates at the AI Summer Camp.</p>
+        <p><strong>Program:</strong> Shanghai Innovation Institute · AI Summer Camp, July–August 2025.</p>
+        <p><strong>Inspirations:</strong> <em>The Devotion of Suspect X</em> · <em>Cyberpunk 2077</em> · <em>The Truman Show</em>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>MIRRORWALKER — every ending is a reflection.</p>
+  </footer>
+
+  <script src="js/teaser.js"></script>
+  <script src="js/ambient.js"></script>
+</body>
+</html>
